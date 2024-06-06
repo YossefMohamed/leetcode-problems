@@ -15,10 +15,8 @@ function lastStoneWeight(stones: number[]): number {
         stones.splice(index2, 1);
 
         const smashResult = greatest1 - greatest2;
-        if (smashResult !== 0) {
             stones.push(smashResult);
-        }
     }
     
-    return stones.length === 1 ? stones[0] : 0;
+    return  stones[0]
 }
