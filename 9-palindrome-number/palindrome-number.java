@@ -1,21 +1,20 @@
+
 class Solution {
     public boolean isPalindrome(int x) {
-        // Check for negative numbers and single digit numbers
-        if (x < 0 || (x != 0 && x % 10 == 0)) {
-            return false;
+        if(x < 0)
+        return false;
+        int num = x;
+        int r = 0;
+        while(true){
+            int remi = x%10;
+            r = (r *10) + remi;
+            x/=10;
+            if(x <=0){
+                break;
+            }
         }
+                System.out.println(r);  // false
 
-        int reversed = 0;
-        int original = x;
-
-        // Reverse the integer
-        while (x > 0) {
-            int digit = x % 10;
-            reversed = reversed * 10 + digit;
-            x /= 10;
-        }
-
-        // Compare the original and reversed integers
-        return original == reversed;
+      return r==num;
     }
 }
